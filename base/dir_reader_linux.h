@@ -76,8 +76,7 @@ class DirReaderLinux {
     if (!size_)
       return NULL;
 
-    const linux_dirent* dirent =
-        union {
+    union {
       const unsigned char *bufp;
       const linux_dirent* dirent;
     };
